@@ -40,7 +40,7 @@ export default function Pagination({
               aria-current={number === page ? 'page' : undefined}
               onClick={() => onChange(number)}
               className={cn(
-                'h-12 font-heading text-heading-xs/7',
+                "relative h-12 font-heading text-heading-xs/7 after:absolute after:-inset-x-2.5 after:inset-y-0 after:content-['']",
                 focusRing,
                 number === page
                   ? 'cursor-default text-shuttle-gray-200'
