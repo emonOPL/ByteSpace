@@ -35,7 +35,7 @@ export default function Header({ className }) {
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-300',
         scrolled || open
-          ? 'bg-persian-blue-800 shadow-[0_0.5rem_1.5rem_rgb(4_8_25/0.16)]'
+          ? 'bg-persian-blue-800 shadow-float'
           : 'bg-transparent',
         className,
       )}

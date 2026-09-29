@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router'
-import searchIcon from '@/assets/icons/search.svg'
 import coilWhite from '@/assets/images/ornament-coil-white.webp'
 import cylinderLime from '@/assets/images/ornament-cylinder-lime.webp'
 import pyramidWhite from '@/assets/images/ornament-pyramid-white.webp'
@@ -13,6 +12,7 @@ import Container from '@/components/ui/Container'
 import FloatingCard from '@/components/ui/FloatingCard'
 import GridPattern from '@/components/ui/GridPattern'
 import Ornaments from '@/components/ui/Ornaments'
+import SearchField from '@/components/ui/SearchField'
 import { hero } from '@/data/home'
 
 const ornaments = [
@@ -53,19 +53,13 @@ export default function HeroSection() {
           onSubmit={handleSubmit}
           className="mt-15 flex w-full max-w-145.25 flex-col gap-3 min-[23.4375rem]:flex-row min-[23.4375rem]:items-start sm:gap-4"
         >
-          <div className="flex h-13 min-w-0 items-center gap-2 rounded-3xl bg-white px-4 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-electric-lime-400 min-[23.4375rem]:flex-1 sm:px-6">
-            <img src={searchIcon} alt="" className="shrink-0" />
-            <label htmlFor="hero-search" className="sr-only">
-              {search.label}
-            </label>
-            <input
-              id="hero-search"
-              name="q"
-              type="search"
-              placeholder={search.placeholder}
-              className="w-full min-w-0 bg-transparent text-body-m text-shuttle-gray-950 outline-none placeholder:text-shuttle-gray-400 sm:text-body-l"
-            />
-          </div>
+          <SearchField
+            id="hero-search"
+            name="q"
+            label={search.label}
+            placeholder={search.placeholder}
+            className="min-[23.4375rem]:flex-1"
+          />
           <Button type="submit" className="shrink-0 min-[23.4375rem]:w-auto">
             {search.button}
           </Button>

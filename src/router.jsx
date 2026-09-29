@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router'
+import MainLayout from '@/components/layout/MainLayout'
 import RootLayout from '@/components/layout/RootLayout'
 import HomePage from '@/pages/HomePage'
 
@@ -8,7 +9,13 @@ export const router = createBrowserRouter([
   {
     element: <RootLayout />,
     children: [
-      { path: '/', element: <HomePage /> },
+      {
+        element: <MainLayout />,
+        children: [
+          { path: '/', element: <HomePage /> },
+          { path: '/courses', lazy: page(() => import('@/pages/CoursesPage')) },
+        ],
+      },
       { path: '/login', lazy: page(() => import('@/pages/LoginPage')) },
       { path: '/signup', lazy: page(() => import('@/pages/SignupPage')) },
     ],

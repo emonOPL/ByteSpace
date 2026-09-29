@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
-import CourseCard from '@/components/cards/CourseCard'
+import CourseGrid from '@/components/cards/CourseGrid'
 import Container from '@/components/ui/Container'
-import { courseTabs, courses, coursesIntro } from '@/data/home'
+import TabButton from '@/components/ui/TabButton'
+import { courses } from '@/data/courses'
+import { courseTabs, coursesIntro } from '@/data/home'
 import { cn } from '@/lib/cn'
 import { focusRing } from '@/lib/focus'
 
@@ -30,21 +32,13 @@ export default function CoursesSection() {
               className="contents lg:flex lg:items-center lg:gap-4"
             >
               {row.map((tab) => (
-                <button
+                <TabButton
                   key={tab}
-                  type="button"
-                  aria-pressed={tab === activeTab}
+                  active={tab === activeTab}
                   onClick={() => setActiveTab(tab)}
-                  className={cn(
-                    'rounded-3xl px-4 py-3 text-label-m',
-                    focusRing,
-                    tab === activeTab
-                      ? 'bg-electric-lime-400 text-shuttle-gray-950'
-                      : 'bg-shuttle-gray-50 text-shuttle-gray-700',
-                  )}
                 >
                   {tab}
-                </button>
+                </TabButton>
               ))}
               {row === lastRow && (
                 <Link
@@ -60,13 +54,10 @@ export default function CoursesSection() {
             </div>
           ))}
         </div>
-        <ul className="mt-19.25 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(3,23.3125rem)]">
-          {courses.map((course) => (
-            <li key={course.id}>
-              <CourseCard course={course} className="h-full" />
-            </li>
-          ))}
-        </ul>
+        <CourseGrid
+          items={courses.map((course) => ({ key: course.id, course }))}
+          className="mt-19.25"
+        />
       </Container>
     </section>
   )
