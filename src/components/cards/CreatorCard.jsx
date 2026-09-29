@@ -21,7 +21,7 @@ export default function CreatorCard({ creator, labels, className }) {
         className,
       )}
     >
-      <div className="flex items-center gap-4">
+      <div className="flex items-start gap-4">
         <img
           src={avatar}
           alt=""
@@ -30,7 +30,7 @@ export default function CreatorCard({ creator, labels, className }) {
           height="80"
           className="size-20 shrink-0 rounded-3xl object-cover"
         />
-        <div className="flex min-w-0 flex-col gap-1">
+        <div className="flex min-w-0 flex-col gap-1 pt-2">
           <h3 className="truncate font-heading text-heading-xs text-black-950">
             {name}
           </h3>
