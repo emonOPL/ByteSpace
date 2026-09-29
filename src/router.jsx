@@ -1,7 +1,9 @@
 import { createBrowserRouter, data } from 'react-router'
 import MainLayout from '@/components/layout/MainLayout'
 import RootLayout from '@/components/layout/RootLayout'
+import RouteError from '@/components/layout/RouteError'
 import HomePage from '@/pages/HomePage'
+import NotFoundPage from '@/pages/NotFoundPage'
 
 const page = (load) => async () => ({ Component: (await load()).default })
 
@@ -39,10 +41,19 @@ export const router = createBrowserRouter([
       {
         element: <MainLayout />,
         children: [
-          { path: '/', element: <HomePage /> },
-          { path: '/courses', lazy: page(() => import('@/pages/CoursesPage')) },
-          { path: '/courses/:slug', lazy: courseDetails },
-          { path: '/creators/:slug', lazy: creatorProfile },
+          {
+            errorElement: <RouteError />,
+            children: [
+              { path: '/', element: <HomePage /> },
+              {
+                path: '/courses',
+                lazy: page(() => import('@/pages/CoursesPage')),
+              },
+              { path: '/courses/:slug', lazy: courseDetails },
+              { path: '/creators/:slug', lazy: creatorProfile },
+              { path: '*', element: <NotFoundPage /> },
+            ],
+          },
         ],
       },
       { path: '/login', lazy: page(() => import('@/pages/LoginPage')) },
