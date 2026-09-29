@@ -14,7 +14,7 @@ export default function ProgressCard({
       <p className={cn('text-label-s text-shuttle-gray-950', labelClassName)}>
         {label}
       </p>
-      <p className="font-heading text-5xl/heading font-semibold tracking-heading text-shuttle-gray-950">
+      <p className="font-heading text-5xl/14.5 font-semibold tracking-heading text-shuttle-gray-950">
         {value}%
       </p>
       <ProgressBar value={fill} label={label} />

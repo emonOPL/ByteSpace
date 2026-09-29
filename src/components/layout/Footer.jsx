@@ -18,9 +18,9 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-shuttle-gray-200 bg-white pt-17.5 pb-12">
-      <Container className="flex flex-col gap-16 lg:gap-32.5">
-        <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-23">
-          <div className="flex flex-col gap-11.25 lg:w-132">
+      <Container className="flex flex-col gap-16 xl:gap-32.5">
+        <div className="flex flex-col gap-12 xl:flex-row xl:justify-between xl:gap-23">
+          <div className="flex flex-col gap-11.25 xl:w-132">
             <div className="flex flex-col gap-4">
               <Link to="/" className={cn(linkClass, 'self-start')}>
                 <Logo />
@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
           <nav
             aria-label="Footer"
-            className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-[repeat(3,10.4375rem)] lg:gap-10 lg:pt-12"
+            className="grid grid-cols-2 gap-6 sm:grid-cols-3 xl:grid-cols-[repeat(3,10.4375rem)] xl:gap-10 xl:pt-12"
           >
             {columns.map((column) => (
               <div key={column.id}>

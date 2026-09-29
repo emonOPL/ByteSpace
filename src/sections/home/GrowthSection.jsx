@@ -38,7 +38,7 @@ export default function GrowthSection() {
           <img
             src={image}
             alt=""
-            className="absolute top-3 left-0 h-135 w-144.25 drop-shadow-portrait"
+            className="absolute top-3 left-0 h-135 w-144.25 [filter:url(#portrait-shadow)]"
           />
           <ProgressCard
             {...progress}
@@ -49,7 +49,7 @@ export default function GrowthSection() {
             src={coilLime}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute top-16.75 left-101 size-54"
+            className="pointer-events-none absolute top-16.75 left-101 w-54.25"
           />
         </div>
       </div>

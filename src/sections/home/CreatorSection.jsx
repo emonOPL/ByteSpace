@@ -29,7 +29,7 @@ export default function CreatorSection() {
         <h2 className="max-w-97.75 font-heading text-heading-s text-shuttle-gray-950 md:text-heading-m">
           {title}
         </h2>
-        <p className="text-body-l/7 text-shuttle-gray-950">
+        <p className="text-body-l text-shuttle-gray-950">
           <strong className="font-bold">{brand}</strong> {description}
         </p>
         <ul className="flex flex-col gap-4">
@@ -71,7 +71,7 @@ export default function CreatorSection() {
               {yearToDate.change}
             </span>
           </FloatingCard>
-          <div className="absolute top-0 left-7 h-149 w-108.75 overflow-hidden drop-shadow-portrait">
+          <div className="absolute top-0 left-7 h-149 w-108.75 overflow-hidden [filter:url(#portrait-shadow)]">
             <img
               src={image}
               alt=""
@@ -88,7 +88,7 @@ export default function CreatorSection() {
             src={springLime}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute top-28.5 left-75.75 size-54"
+            className="pointer-events-none absolute top-28.5 left-75.75 w-54.25"
           />
         </div>
       </div>

@@ -60,7 +60,7 @@ export default function CoursesSection() {
             </div>
           ))}
         </div>
-        <ul className="mt-19.25 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(3,23.3125rem)]">
+        <ul className="mt-19.25 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(3,23.3125rem)]">
           {courses.map((course) => (
             <li key={course.id}>
               <CourseCard course={course} className="h-full" />

@@ -1,5 +1,6 @@
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
+import PortraitShadow from '@/components/ui/PortraitShadow'
 import CategoriesSection from '@/sections/home/CategoriesSection'
 import CoursesSection from '@/sections/home/CoursesSection'
 import CtaSection from '@/sections/home/CtaSection'
@@ -11,6 +12,7 @@ import TestimonialsSection from '@/sections/home/TestimonialsSection'
 export default function HomePage() {
   return (
     <div className="relative">
+      <PortraitShadow />
       <Header className="absolute inset-x-0 top-0" />
       <main>
         <HeroSection />

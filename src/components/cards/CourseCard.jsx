@@ -11,7 +11,6 @@ const variants = {
     title: '',
     author: '',
     level: '',
-    price: '',
     rating: 'text-body-l',
     star: starRounded,
     tone: 'lime',
@@ -21,7 +20,6 @@ const variants = {
     title: 'leading-7',
     author: 'leading-5',
     level: 'leading-5',
-    price: 'font-medium leading-7',
     rating: 'text-label-l/7',
     star: starSharp,
     tone: 'dark',
@@ -55,7 +53,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
         {image && <img src={image} alt="" className="size-full object-cover" />}
         <ul className="absolute top-37.5 left-3 flex gap-3">
           {meta.map((item) => (
-            <li key={item}>
+            <li key={item} className="flex">
               <Chip className={styles.chip}>{item}</Chip>
             </li>
           ))}
@@ -76,7 +74,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
               by <span className="text-persian-blue-800">{author}</span>
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <span
               className={cn(
                 'flex h-8 items-center gap-1 rounded-3xl bg-shuttle-gray-50 px-3 text-label-xs text-shuttle-gray-700',
@@ -94,12 +92,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
             />
           </div>
           <p className="flex items-end">
-            <span
-              className={cn(
-                'font-heading text-heading-xs text-persian-blue-800',
-                styles.price,
-              )}
-            >
+            <span className="font-heading text-heading-xs text-persian-blue-800">
               {price}
             </span>
             <span className={cn('text-body-xs text-black-700', styles.author)}>

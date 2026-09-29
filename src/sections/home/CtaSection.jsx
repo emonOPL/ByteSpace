@@ -13,13 +13,13 @@ import Ornaments from '@/components/ui/Ornaments'
 import { cta } from '@/data/home'
 
 const ornaments = [
-  { src: pyramidLime, className: 'top-0 left-269.5 size-47.25' },
-  { src: coilLime, className: 'top-72.25 left-276.75 size-83' },
-  { src: springLime, className: '-top-40.5 -left-30.5 size-96.75' },
-  { src: springWhite, className: 'top-1.25 left-44.75 size-44 -scale-x-100' },
-  { src: coneWhite, className: 'top-56.25 -left-12.5 size-47.25' },
-  { src: torusLime, className: 'top-74.5 left-4 size-86' },
-  { src: cylinderWhite, className: 'top-1.25 left-305.5 size-93' },
+  { src: pyramidLime, className: 'top-0 left-269.5 w-47.5' },
+  { src: coilLime, className: 'top-72.25 left-276.75 w-83.5' },
+  { src: springLime, className: '-top-40.5 -left-30.5 w-97.25' },
+  { src: springWhite, className: 'top-1.25 left-44.5 w-44.25' },
+  { src: coneWhite, className: 'top-56.25 -left-12.5 w-47.5' },
+  { src: torusLime, className: 'top-74.5 left-4 w-86.5' },
+  { src: cylinderWhite, className: 'top-1.25 left-305.5 w-93.5' },
 ]
 
 export default function CtaSection() {

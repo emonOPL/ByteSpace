@@ -16,12 +16,12 @@ import Ornaments from '@/components/ui/Ornaments'
 import { hero } from '@/data/home'
 
 const ornaments = [
-  { src: coilWhite, className: 'top-168 left-281 size-83' },
-  { src: springLime, className: 'top-55.25 -left-30.5 size-96.75' },
-  { src: springWhite, className: 'top-119.25 left-46 size-44 -scale-x-100' },
-  { src: torusWhite, className: 'top-170.25 left-3.5 size-86' },
-  { src: cylinderLime, className: 'top-55 left-306.75 size-93' },
-  { src: pyramidWhite, className: 'top-116 left-276 size-47.25' },
+  { src: coilWhite, className: 'top-168 left-281 w-83.5' },
+  { src: springLime, className: 'top-55.25 -left-30.5 w-97.25' },
+  { src: springWhite, className: 'top-119.25 left-45.75 w-44.25' },
+  { src: torusWhite, className: 'top-170.25 left-3.5 w-86.5' },
+  { src: cylinderLime, className: 'top-55 left-306.75 w-93.5' },
+  { src: pyramidWhite, className: 'top-116 left-276 w-47.5' },
 ]
 
 export default function HeroSection() {
@@ -80,7 +80,7 @@ export default function HeroSection() {
           <img
             src={image}
             alt=""
-            className="absolute inset-0 size-full drop-shadow-portrait"
+            className="absolute inset-0 size-full [filter:url(#portrait-shadow)]"
           />
           <FloatingCard className="absolute top-31.75 -left-6.75 hidden w-52 text-left sm:flex">
             <div>
