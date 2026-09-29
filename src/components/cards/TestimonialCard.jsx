@@ -12,6 +12,9 @@ export default function TestimonialCard({ testimonial, className }) {
           <img
             src={avatar}
             alt=""
+            loading="lazy"
+            width="80"
+            height="80"
             className="size-20 rounded-full object-cover"
           />
         )}

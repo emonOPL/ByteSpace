@@ -4,7 +4,7 @@ export const footer = {
   newsletter: {
     label: 'Email address',
     placeholder: 'Enter your email',
-    button: 'Search',
+    button: 'Subscribe',
     consent:
       'By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.',
   },

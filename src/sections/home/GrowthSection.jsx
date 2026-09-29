@@ -39,6 +39,9 @@ export default function GrowthSection() {
           <img
             src={image}
             alt=""
+            loading="lazy"
+            width="516"
+            height="483"
             className="absolute top-3 left-0 h-135 w-144.25 [filter:url(#portrait-shadow)]"
           />
           <ProgressCard
@@ -46,7 +49,11 @@ export default function GrowthSection() {
             className="absolute top-53.25 left-86.25 w-58"
             labelClassName="leading-6"
           />
-          <Ornament src={coilLime} className="top-16.75 left-101 w-54.25" />
+          <Ornament
+            src={coilLime}
+            loading="lazy"
+            className="top-16.75 left-101 w-54.25"
+          />
         </div>
       </div>
     </section>

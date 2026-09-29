@@ -8,15 +8,11 @@ const toOptions = (items) => items.map((item) => ({ value: item, label: item }))
 
 export const courseListing = {
   title: 'Courses | ByteSpace',
+  description:
+    'Browse ByteSpace courses in design, marketing, data, productivity and more. Filter by level and category to find your next course.',
   heading: 'Find Your Next Course',
   search: { label: 'Search courses', placeholder: 'Search' },
-  scope: {
-    label: 'Search in',
-    options: [
-      { value: 'courses', label: 'Courses', to: '/courses' },
-      { value: 'creators', label: 'Creators', to: '/creators' },
-    ],
-  },
+  scope: 'courses',
   reset: {
     label: 'Filter',
     description: 'Clear all filters',

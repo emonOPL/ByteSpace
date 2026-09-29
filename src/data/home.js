@@ -23,6 +23,12 @@ import { courses } from '@/data/courses'
 import creatorStudent from '@/assets/images/creator-student.webp'
 import heroStudent from '@/assets/images/hero-student.webp'
 
+export const homeMeta = {
+  title: 'ByteSpace | Learn and Create Online Courses',
+  description:
+    'ByteSpace is an online learning platform where creators publish courses and learners grow their skills in design, marketing, development and more.',
+}
+
 export const hero = {
   title: 'Get Access to Hundreds Courses Available',
   description:

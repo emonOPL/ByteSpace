@@ -70,6 +70,9 @@ export default function CreatorSection() {
             <img
               src={image}
               alt=""
+              loading="lazy"
+              width="500"
+              height="500"
               className="absolute top-0 -left-31 size-170.75 max-w-none"
             />
           </div>
@@ -80,7 +83,11 @@ export default function CreatorSection() {
             ratingClassName="h-4 text-2xs/normal"
             ratingValueClassName="font-bold"
           />
-          <Ornament src={springLime} className="top-28.5 left-75.75 w-54.25" />
+          <Ornament
+            src={springLime}
+            loading="lazy"
+            className="top-28.5 left-75.75 w-54.25"
+          />
         </div>
       </div>
     </section>

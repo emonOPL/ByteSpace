@@ -29,7 +29,7 @@ export default function Footer() {
               <p className="text-body-s text-shuttle-gray-950">{description}</p>
             </div>
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
                 <label htmlFor="newsletter-email" className="sr-only">
                   {newsletter.label}
                 </label>
@@ -44,11 +44,11 @@ export default function Footer() {
                     focusRing,
                   )}
                 />
-                <Button type="submit" className="self-start">
+                <Button type="submit" className="self-start sm:self-center">
                   {newsletter.button}
                 </Button>
               </div>
-              <p className="max-w-126 text-body-xs text-shuttle-gray-950">
+              <p className="text-body-xs text-shuttle-gray-950">
                 {newsletter.consent}
               </p>
             </form>

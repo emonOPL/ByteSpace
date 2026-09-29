@@ -13,6 +13,14 @@ export const authNav = [
   { label: 'Join Us', to: '/signup' },
 ]
 
+export const searchScope = {
+  label: 'Search in',
+  options: [
+    { value: 'courses', label: 'Courses', to: '/courses' },
+    { value: 'creators', label: 'Creators', to: '/creators' },
+  ],
+}
+
 export const cartLink = { label: 'Cart', to: '/cart' }
 
 export const menuLabels = { open: 'Open menu', close: 'Close menu' }

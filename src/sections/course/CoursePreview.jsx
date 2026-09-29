@@ -9,7 +9,14 @@ export default function CoursePreview({ image, label, className }) {
         className,
       )}
     >
-      <img src={image} alt={label} className="size-full object-cover" />
+      <img
+        src={image}
+        alt={label}
+        fetchPriority="high"
+        width="725"
+        height="479"
+        className="size-full object-cover"
+      />
       <span
         aria-hidden="true"
         className="absolute top-1/2 left-1/2 flex size-18 -translate-1/2 items-center justify-center rounded-3xl border border-black-700 bg-shuttle-gray-900/24 backdrop-blur-[2.5rem] sm:size-26"

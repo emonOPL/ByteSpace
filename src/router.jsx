@@ -50,6 +50,10 @@ export const router = createBrowserRouter([
                 lazy: page(() => import('@/pages/CoursesPage')),
               },
               { path: '/courses/:slug', lazy: courseDetails },
+              {
+                path: '/creators',
+                lazy: page(() => import('@/pages/CreatorsPage')),
+              },
               { path: '/creators/:slug', lazy: creatorProfile },
               { path: '*', element: <NotFoundPage /> },
             ],
