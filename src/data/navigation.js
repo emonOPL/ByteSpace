@@ -1,3 +1,7 @@
+export const homeLink = { label: 'ByteSpace home', to: '/' }
+
+export const navLabels = { main: 'Main', mobile: 'Mobile', footer: 'Footer' }
+
 export const mainNav = [
   { label: 'Home', to: '/' },
   { label: 'Courses', to: '/courses' },

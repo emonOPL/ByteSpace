@@ -4,7 +4,14 @@ import shoppingBag from '@/assets/icons/shopping-bag.svg'
 import Container from '@/components/ui/Container'
 import Logo from '@/components/ui/Logo'
 import MenuButton from '@/components/ui/MenuButton'
-import { authNav, cartLink, mainNav, menuLabels } from '@/data/navigation'
+import {
+  authNav,
+  cartLink,
+  homeLink,
+  mainNav,
+  menuLabels,
+  navLabels,
+} from '@/data/navigation'
 import { useScrolled } from '@/hooks/useScrolled'
 import { cn } from '@/lib/cn'
 import { focusRing } from '@/lib/focus'
@@ -40,14 +47,14 @@ export default function Header({ className }) {
         )}
       >
         <Link
-          to="/"
+          to={homeLink.to}
           onClick={close}
           className={cn(linkClass, 'lg:mt-8.75 lg:ml-0.5')}
         >
           <Logo />
         </Link>
         <nav
-          aria-label="Main"
+          aria-label={navLabels.main}
           className="hidden lg:absolute lg:top-11.75 lg:left-1/2 lg:block lg:-translate-x-1/2"
         >
           <ul className="flex items-start gap-6">
@@ -103,7 +110,7 @@ export default function Header({ className }) {
       >
         <div className="overflow-hidden">
           <Container className="flex flex-col gap-4 border-t border-shuttle-gray-50/12 pt-4 pb-6">
-            <nav aria-label="Mobile">
+            <nav aria-label={navLabels.mobile}>
               <ul className="flex flex-col">
                 {mainNav.map((item) => (
                   <li key={item.to}>

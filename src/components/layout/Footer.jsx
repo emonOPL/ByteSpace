@@ -3,6 +3,7 @@ import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
 import Logo from '@/components/ui/Logo'
 import { footer } from '@/data/footer'
+import { homeLink, navLabels } from '@/data/navigation'
 import { cn } from '@/lib/cn'
 import { focusRing } from '@/lib/focus'
 
@@ -22,7 +23,7 @@ export default function Footer() {
         <div className="flex flex-col gap-12 xl:flex-row xl:justify-between xl:gap-23">
           <div className="flex flex-col gap-11.25 xl:w-132">
             <div className="flex flex-col gap-4">
-              <Link to="/" className={cn(linkClass, 'self-start')}>
+              <Link to={homeLink.to} className={cn(linkClass, 'self-start')}>
                 <Logo />
               </Link>
               <p className="text-body-s text-shuttle-gray-950">{description}</p>
@@ -53,7 +54,7 @@ export default function Footer() {
             </form>
           </div>
           <nav
-            aria-label="Footer"
+            aria-label={navLabels.footer}
             className="grid grid-cols-2 gap-6 sm:grid-cols-3 xl:grid-cols-[repeat(3,10.4375rem)] xl:gap-10 xl:pt-12"
           >
             {columns.map((column) => (

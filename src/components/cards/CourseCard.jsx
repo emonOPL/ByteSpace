@@ -7,6 +7,7 @@ import { cn } from '@/lib/cn'
 
 const variants = {
   default: {
+    chips: 'bottom-4.75',
     chip: '',
     title: '',
     author: '',
@@ -16,6 +17,7 @@ const variants = {
     tone: 'lime',
   },
   highlight: {
+    chips: 'bottom-3.25',
     chip: 'leading-5',
     title: 'leading-7',
     author: 'leading-5',
@@ -30,6 +32,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
   const {
     image,
     title,
+    authorPrefix,
     author,
     meta,
     level,
@@ -37,6 +40,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
     learnerAvatars,
     price,
     billing,
+    ratingLabel,
     rating,
     strongRating,
   } = course
@@ -51,7 +55,12 @@ export default function CourseCard({ course, variant = 'default', className }) {
     >
       <div className="relative h-[12.19625rem] shrink-0 overflow-hidden rounded-xl bg-media">
         {image && <img src={image} alt="" className="size-full object-cover" />}
-        <ul className="absolute right-3 bottom-4.75 left-3 flex flex-wrap gap-x-3 gap-y-2">
+        <ul
+          className={cn(
+            'absolute right-3 left-3 flex flex-wrap gap-x-3 gap-y-2',
+            styles.chips,
+          )}
+        >
           {meta.map((item) => (
             <li key={item} className="flex">
               <Chip className={styles.chip}>{item}</Chip>
@@ -71,7 +80,8 @@ export default function CourseCard({ course, variant = 'default', className }) {
               {title}
             </h3>
             <p className={cn('text-body-xs text-black-700', styles.author)}>
-              by <span className="text-persian-blue-800">{author}</span>
+              {authorPrefix}{' '}
+              <span className="text-persian-blue-800">{author}</span>
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
@@ -106,7 +116,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
             strongRating ? 'text-label-l/7' : styles.rating,
           )}
         >
-          <span className="sr-only">Rating </span>
+          <span className="sr-only">{ratingLabel} </span>
           {rating}
           <img src={styles.star} alt="" />
         </p>

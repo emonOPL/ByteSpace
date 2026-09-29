@@ -108,6 +108,7 @@ export const courseTabs = {
 }
 
 const courseDefaults = {
+  authorPrefix: 'by',
   author: 'purepearl studio',
   meta: ['17 Lessons', '2 hours 16 mins', '59 Comments'],
   level: 'Beginner',
@@ -115,6 +116,7 @@ const courseDefaults = {
   learnerAvatars: [avatar2, avatar8, avatar9, avatar10].map((src) => ({ src })),
   price: '$25',
   billing: '/lifetime',
+  ratingLabel: 'Rating',
   rating: '4.5',
 }
 

@@ -2,6 +2,7 @@ import checkCircle from '@/assets/icons/check-circle.svg'
 import springLime from '@/assets/images/ornament-spring-lime.webp'
 import StudentsCard from '@/components/cards/StudentsCard'
 import FloatingCard from '@/components/ui/FloatingCard'
+import Ornament from '@/components/ui/Ornament'
 import ProgressBar from '@/components/ui/ProgressBar'
 import { creator } from '@/data/home'
 import { cn } from '@/lib/cn'
@@ -82,14 +83,10 @@ export default function CreatorSection() {
             {...students}
             className="absolute top-103.25 left-70.75 w-64.5"
             titleClassName="leading-6"
-            ratingClassName="h-4 text-2xs/normal font-bold"
+            ratingClassName="h-4 text-2xs/normal"
+            ratingValueClassName="font-bold"
           />
-          <img
-            src={springLime}
-            alt=""
-            aria-hidden="true"
-            className="pointer-events-none absolute top-28.5 left-75.75 w-54.25"
-          />
+          <Ornament src={springLime} className="top-28.5 left-75.75 w-54.25" />
         </div>
       </div>
     </section>
