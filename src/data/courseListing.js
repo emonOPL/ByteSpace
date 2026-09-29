@@ -10,13 +10,7 @@ export const courseListing = {
   title: 'Courses | ByteSpace',
   heading: 'Find Your Next Course',
   search: { label: 'Search courses', placeholder: 'Search' },
-  scope: {
-    label: 'Search in',
-    options: [
-      { value: 'courses', label: 'Courses', to: '/courses' },
-      { value: 'creators', label: 'Creators', to: '/creators' },
-    ],
-  },
+  scope: 'courses',
   reset: {
     label: 'Filter',
     description: 'Clear all filters',

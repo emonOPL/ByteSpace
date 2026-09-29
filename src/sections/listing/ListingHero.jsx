@@ -6,12 +6,18 @@ import Container from '@/components/ui/Container'
 import Dropdown from '@/components/ui/Dropdown'
 import GridPattern from '@/components/ui/GridPattern'
 import SearchField from '@/components/ui/SearchField'
-import { courseListing } from '@/data/courseListing'
+import { searchScope } from '@/data/navigation'
 
-export default function CoursesHero({ query, onQueryChange }) {
+export default function ListingHero({
+  id,
+  heading,
+  search,
+  scope,
+  query,
+  onQueryChange,
+}) {
   const navigate = useNavigate()
-  const { heading, search, scope } = courseListing
-  const [current] = scope.options
+  const current = searchScope.options.find((option) => option.value === scope)
   const [value, setValue] = useState(query)
   const pending = useRef(null)
 
@@ -38,7 +44,7 @@ export default function CoursesHero({ query, onQueryChange }) {
   }
 
   function changeScope(scopeValue) {
-    const option = scope.options.find((item) => item.value === scopeValue)
+    const option = searchScope.options.find((item) => item.value === scopeValue)
     if (option.value === current.value) return
     navigate({
       pathname: option.to,
@@ -59,7 +65,7 @@ export default function CoursesHero({ query, onQueryChange }) {
           className="flex w-full max-w-156 flex-col gap-3 min-[23.4375rem]:flex-row min-[23.4375rem]:items-start sm:gap-4"
         >
           <SearchField
-            id="courses-search"
+            id={id}
             label={search.label}
             placeholder={search.placeholder}
             value={value}
@@ -67,9 +73,9 @@ export default function CoursesHero({ query, onQueryChange }) {
             className="min-[23.4375rem]:flex-1"
           />
           <Dropdown
-            label={scope.label}
+            label={searchScope.label}
             value={current.value}
-            options={scope.options}
+            options={searchScope.options}
             onChange={changeScope}
             align="end"
             className="shrink-0"

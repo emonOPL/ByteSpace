@@ -12,7 +12,7 @@ export default function PillButton({
     <Component
       type={Component === 'button' ? 'button' : undefined}
       className={cn(
-        'inline-flex h-12 shrink-0 items-center gap-1 rounded-3xl border border-shuttle-gray-200 bg-white px-4 text-label-m text-shuttle-gray-700',
+        'inline-flex h-12 shrink-0 items-center gap-1 rounded-3xl border border-shuttle-gray-200 bg-white px-4 text-label-m whitespace-nowrap text-shuttle-gray-700',
         focusRing,
         className,
       )}

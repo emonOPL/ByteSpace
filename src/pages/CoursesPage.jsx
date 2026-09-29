@@ -6,8 +6,8 @@ import { courseListing } from '@/data/courseListing'
 import { courses } from '@/data/courses'
 import { useCourseFilters } from '@/hooks/useCourseFilters'
 import CourseFilters from '@/sections/courses/CourseFilters'
-import EmptyResults from '@/sections/courses/EmptyResults'
-import CoursesHero from '@/sections/courses/CoursesHero'
+import EmptyResults from '@/sections/listing/EmptyResults'
+import ListingHero from '@/sections/listing/ListingHero'
 
 export default function CoursesPage() {
   const resultsRef = useRef(null)
@@ -22,7 +22,11 @@ export default function CoursesPage() {
   return (
     <>
       <title>{courseListing.title}</title>
-      <CoursesHero
+      <ListingHero
+        id="courses-search"
+        heading={courseListing.heading}
+        search={courseListing.search}
+        scope={courseListing.scope}
         query={filters.q}
         onQueryChange={(value) => setFilter('q', value, { replace: true })}
       />
@@ -45,7 +49,7 @@ export default function CoursesPage() {
                 className="xl:ml-px"
               />
             ) : (
-              <EmptyResults onReset={reset} />
+              <EmptyResults copy={courseListing.empty} onReset={reset} />
             )}
           </div>
           {totalPages > 1 && (
