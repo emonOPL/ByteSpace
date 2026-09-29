@@ -56,6 +56,7 @@ export default function CoursesSection() {
         </div>
         <CourseGrid
           items={courses.map((course) => ({ key: course.id, course }))}
+          getHref={(course) => `/courses/${course.id}`}
           className="mt-19.25"
         />
       </Container>

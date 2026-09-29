@@ -62,7 +62,7 @@ export default function Header({ className }) {
               <li key={item.to}>
                 <NavLink
                   to={item.to}
-                  end
+                  end={item.to === homeLink.to}
                   className={({ isActive }) =>
                     cn(linkClass, isActive ? 'text-label-m' : 'text-body-m')
                   }
@@ -116,7 +116,7 @@ export default function Header({ className }) {
                   <li key={item.to}>
                     <NavLink
                       to={item.to}
-                      end
+                      end={item.to === homeLink.to}
                       onClick={close}
                       className={({ isActive }) =>
                         cn(
