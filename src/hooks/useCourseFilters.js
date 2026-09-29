@@ -29,7 +29,8 @@ export function useCourseFilters(courses, { perPage, featuredPages }) {
     const sorted = sorters[filters.sort]
       ? [...matches].sort(sorters[filters.sort])
       : matches
-    const length = filtered ? sorted.length : perPage * featuredPages
+    const length =
+      filtered || !featuredPages ? sorted.length : perPage * featuredPages
     return {
       total: sorted.length,
       results: sorted.length
