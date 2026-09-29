@@ -1,19 +1,18 @@
 import { useRef } from 'react'
 import CourseGrid from '@/components/cards/CourseGrid'
-import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
 import Pagination from '@/components/ui/Pagination'
 import { courseListing } from '@/data/courseListing'
 import { courses } from '@/data/courses'
 import { useCourseFilters } from '@/hooks/useCourseFilters'
 import CourseFilters from '@/sections/courses/CourseFilters'
+import EmptyResults from '@/sections/courses/EmptyResults'
 import CoursesHero from '@/sections/courses/CoursesHero'
 
 export default function CoursesPage() {
   const resultsRef = useRef(null)
   const { filters, items, total, page, totalPages, setFilter, setPage, reset } =
     useCourseFilters(courses, courseListing.pagination)
-  const { empty } = courseListing
 
   function changePage(value) {
     setPage(value)
@@ -46,15 +45,7 @@ export default function CoursesPage() {
                 className="xl:ml-px"
               />
             ) : (
-              <div className="flex flex-col items-center gap-4 rounded-3xl border border-shuttle-gray-200 px-6 py-16 text-center">
-                <p className="font-heading text-heading-xs text-shuttle-gray-950">
-                  {empty.title}
-                </p>
-                <p className="text-body-m text-shuttle-gray-700">
-                  {empty.description}
-                </p>
-                <Button onClick={reset}>{empty.action}</Button>
-              </div>
+              <EmptyResults onReset={reset} />
             )}
           </div>
           {totalPages > 1 && (

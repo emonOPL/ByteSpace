@@ -3,7 +3,12 @@ import PillButton from '@/components/ui/PillButton'
 import TabButton from '@/components/ui/TabButton'
 import { courseListing } from '@/data/courseListing'
 
-export default function CourseFilters({ filters, onChange, onReset }) {
+export default function CourseFilters({
+  filters,
+  onChange,
+  onReset,
+  showTabs = true,
+}) {
   const { reset, level, category, sort, tabs } = courseListing
 
   const renderDropdown = (key, config, { align, showValue } = {}) => {
@@ -43,21 +48,23 @@ export default function CourseFilters({ filters, onChange, onReset }) {
         </div>
         {renderDropdown('sort', sort, { align: 'end', showValue: true })}
       </div>
-      <div
-        role="group"
-        aria-label={tabs.label}
-        className="flex flex-wrap gap-3 xl:flex-nowrap xl:justify-between xl:gap-0"
-      >
-        {tabs.items.map((tab) => (
-          <TabButton
-            key={tab.label}
-            active={filters.category === tab.value}
-            onClick={() => onChange('category', tab.value)}
-          >
-            {tab.label}
-          </TabButton>
-        ))}
-      </div>
+      {showTabs && (
+        <div
+          role="group"
+          aria-label={tabs.label}
+          className="flex flex-wrap gap-3 xl:flex-nowrap xl:justify-between xl:gap-0"
+        >
+          {tabs.items.map((tab) => (
+            <TabButton
+              key={tab.label}
+              active={filters.category === tab.value}
+              onClick={() => onChange('category', tab.value)}
+            >
+              {tab.label}
+            </TabButton>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

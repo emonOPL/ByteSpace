@@ -18,7 +18,7 @@ export default function PillButton({
       )}
       {...props}
     >
-      {icon && <img src={icon} alt="" />}
+      {icon && <img src={icon} alt="" className="size-6 shrink-0" />}
       {children}
     </Component>
   )
