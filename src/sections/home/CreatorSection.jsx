@@ -1,6 +1,6 @@
-import checkCircle from '@/assets/icons/check-circle.svg'
 import springLime from '@/assets/images/ornament-spring-lime.webp'
 import StudentsCard from '@/components/cards/StudentsCard'
+import CheckList from '@/components/ui/CheckList'
 import FloatingCard from '@/components/ui/FloatingCard'
 import Ornament from '@/components/ui/Ornament'
 import ProgressBar from '@/components/ui/ProgressBar'
@@ -33,17 +33,11 @@ export default function CreatorSection() {
         <p className="text-body-l text-shuttle-gray-950">
           <strong className="font-bold">{brand}</strong> {description}
         </p>
-        <ul className="flex flex-col gap-4">
-          {features.map((feature) => (
-            <li
-              key={feature}
-              className="flex min-h-6 items-end gap-2 text-label-l text-shuttle-gray-950"
-            >
-              <img src={checkCircle} alt="" />
-              {feature}
-            </li>
-          ))}
-        </ul>
+        <CheckList
+          items={features}
+          className="gap-4"
+          itemClassName="min-h-6 items-end text-label-l text-shuttle-gray-950"
+        />
       </div>
       <div className="relative h-82 shrink-0 sm:h-119.25 md:h-149 xl:w-135.25">
         <div className="absolute top-0 left-1/2 h-149 w-135.25 origin-top -translate-x-1/2 scale-55 sm:scale-80 md:scale-100">

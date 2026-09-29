@@ -8,16 +8,23 @@ export default function ProgressCard({
   fill = value,
   className,
   labelClassName,
+  valueClassName,
+  barClassName,
 }) {
   return (
     <FloatingCard className={className}>
       <p className={cn('text-label-s text-shuttle-gray-950', labelClassName)}>
         {label}
       </p>
-      <p className="font-heading text-5xl/14.5 font-semibold tracking-heading text-shuttle-gray-950">
+      <p
+        className={cn(
+          'font-heading text-5xl/14.5 font-semibold tracking-heading text-shuttle-gray-950',
+          valueClassName,
+        )}
+      >
         {value}%
       </p>
-      <ProgressBar value={fill} label={label} />
+      <ProgressBar value={fill} label={label} className={barClassName} />
     </FloatingCard>
   )
 }
