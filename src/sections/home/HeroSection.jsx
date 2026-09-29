@@ -1,15 +1,33 @@
 import { useNavigate } from 'react-router'
+import searchIcon from '@/assets/icons/search.svg'
+import coilWhite from '@/assets/images/ornament-coil-white.webp'
+import cylinderLime from '@/assets/images/ornament-cylinder-lime.webp'
+import pyramidWhite from '@/assets/images/ornament-pyramid-white.webp'
+import springLime from '@/assets/images/ornament-spring-lime.webp'
+import springWhite from '@/assets/images/ornament-spring-white.webp'
+import torusWhite from '@/assets/images/ornament-torus-white.webp'
 import ProgressCard from '@/components/cards/ProgressCard'
 import StudentsCard from '@/components/cards/StudentsCard'
 import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
 import FloatingCard from '@/components/ui/FloatingCard'
 import GridPattern from '@/components/ui/GridPattern'
+import Ornaments from '@/components/ui/Ornaments'
 import { hero } from '@/data/home'
+
+const ornaments = [
+  { src: coilWhite, className: 'top-168 left-281 size-83' },
+  { src: springLime, className: 'top-55.25 -left-30.5 size-96.75' },
+  { src: springWhite, className: 'top-119.25 left-46 size-44 -scale-x-100' },
+  { src: torusWhite, className: 'top-170.25 left-3.5 size-86' },
+  { src: cylinderLime, className: 'top-55 left-306.75 size-93' },
+  { src: pyramidWhite, className: 'top-116 left-276 size-47.25' },
+]
 
 export default function HeroSection() {
   const navigate = useNavigate()
-  const { title, description, search, highlight, progress, students } = hero
+  const { title, description, search, image, highlight, progress, students } =
+    hero
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -36,6 +54,7 @@ export default function HeroSection() {
           className="mt-15 flex w-full max-w-145.25 items-start gap-4"
         >
           <div className="flex h-13 min-w-0 flex-1 items-center gap-2 rounded-3xl bg-white px-6 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-electric-lime-400">
+            <img src={searchIcon} alt="" className="shrink-0" />
             <label htmlFor="hero-search" className="sr-only">
               {search.label}
             </label>
@@ -57,6 +76,11 @@ export default function HeroSection() {
           <span
             aria-hidden="true"
             className="absolute top-17.5 -left-71.5 size-287.25 rounded-full border-[20rem] border-electric-lime-500"
+          />
+          <img
+            src={image}
+            alt=""
+            className="absolute inset-0 size-full drop-shadow-portrait"
           />
           <FloatingCard className="absolute top-31.75 -left-6.75 hidden w-52 text-left sm:flex">
             <div>
@@ -82,6 +106,7 @@ export default function HeroSection() {
           />
         </div>
       </div>
+      <Ornaments items={ornaments} />
     </section>
   )
 }

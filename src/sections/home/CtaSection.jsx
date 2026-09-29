@@ -1,8 +1,26 @@
 import { Link } from 'react-router'
+import coilLime from '@/assets/images/ornament-coil-lime.webp'
+import coneWhite from '@/assets/images/ornament-cone-white.webp'
+import cylinderWhite from '@/assets/images/ornament-cylinder-white.webp'
+import pyramidLime from '@/assets/images/ornament-pyramid-lime.webp'
+import springLime from '@/assets/images/ornament-spring-lime.webp'
+import springWhite from '@/assets/images/ornament-spring-white.webp'
+import torusLime from '@/assets/images/ornament-torus-lime.webp'
 import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
 import GridPattern from '@/components/ui/GridPattern'
+import Ornaments from '@/components/ui/Ornaments'
 import { cta } from '@/data/home'
+
+const ornaments = [
+  { src: pyramidLime, className: 'top-0 left-269.5 size-47.25' },
+  { src: coilLime, className: 'top-72.25 left-276.75 size-83' },
+  { src: springLime, className: '-top-40.5 -left-30.5 size-96.75' },
+  { src: springWhite, className: 'top-1.25 left-44.75 size-44 -scale-x-100' },
+  { src: coneWhite, className: 'top-56.25 -left-12.5 size-47.25' },
+  { src: torusLime, className: 'top-74.5 left-4 size-86' },
+  { src: cylinderWhite, className: 'top-1.25 left-305.5 size-93' },
+]
 
 export default function CtaSection() {
   return (
@@ -19,6 +37,7 @@ export default function CtaSection() {
           {cta.button.label}
         </Button>
       </Container>
+      <Ornaments items={ornaments} />
     </section>
   )
 }

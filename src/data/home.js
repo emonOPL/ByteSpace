@@ -1,3 +1,35 @@
+import categoryBusiness from '@/assets/icons/category-business.svg'
+import categoryDesign from '@/assets/icons/category-design.svg'
+import categoryDevelopment from '@/assets/icons/category-development.svg'
+import categoryItSoftware from '@/assets/icons/category-it-software.svg'
+import categoryMarketing from '@/assets/icons/category-marketing.svg'
+import categoryPhotography from '@/assets/icons/category-photography.svg'
+import partner1 from '@/assets/icons/partner-1.svg'
+import partner2 from '@/assets/icons/partner-2.svg'
+import partner3 from '@/assets/icons/partner-3.svg'
+import partner4 from '@/assets/icons/partner-4.svg'
+import partner5 from '@/assets/icons/partner-5.svg'
+import avatar1 from '@/assets/images/avatar-1.webp'
+import avatar2 from '@/assets/images/avatar-2.webp'
+import avatar3 from '@/assets/images/avatar-3.webp'
+import avatar4 from '@/assets/images/avatar-4.webp'
+import avatar5 from '@/assets/images/avatar-5.webp'
+import avatar6 from '@/assets/images/avatar-6.webp'
+import avatar7 from '@/assets/images/avatar-7.webp'
+import avatar8 from '@/assets/images/avatar-8.webp'
+import avatar9 from '@/assets/images/avatar-9.webp'
+import avatar10 from '@/assets/images/avatar-10.webp'
+import avatar11 from '@/assets/images/avatar-11.webp'
+import avatar12 from '@/assets/images/avatar-12.webp'
+import courseBalancingProductivity from '@/assets/images/course-balancing-productivity-and-self-care.webp'
+import courseBuildDigitalAsset from '@/assets/images/course-build-digital-asset.webp'
+import courseIdeaToStartup from '@/assets/images/course-from-idea-to-startup-success.webp'
+import courseLearnFigma from '@/assets/images/course-learn-figma-from-basic.webp'
+import courseMoneyManagement from '@/assets/images/course-mastering-money-management.webp'
+import coursePowerOfBigData from '@/assets/images/course-the-power-of-big-data.webp'
+import creatorStudent from '@/assets/images/creator-student.webp'
+import heroStudent from '@/assets/images/hero-student.webp'
+
 export const hero = {
   title: 'Get Access to Hundreds Courses Available',
   description:
@@ -8,6 +40,7 @@ export const hero = {
     button: 'Search',
     action: '/courses',
   },
+  image: heroStudent,
   highlight: {
     title: 'UI/UX Design',
     meta: ['200 Courses', '1000+ Students'],
@@ -21,14 +54,25 @@ export const hero = {
     title: 'Happy Students',
     rating: '4.5',
     reviews: '(240)',
-    avatars: [],
+    avatars: [
+      avatar1,
+      avatar2,
+      avatar3,
+      avatar4,
+      avatar5,
+      avatar6,
+      avatar7,
+    ].map((src) => ({ src })),
     count: '2K+',
   },
 }
 
 export const partners = {
   label: 'Our partners',
-  logos: [],
+  logos: [partner1, partner2, partner3, partner4, partner5].map((src) => ({
+    name: 'Logoipsum',
+    src,
+  })),
 }
 
 export const coursesIntro = {
@@ -68,26 +112,44 @@ const courseDefaults = {
   meta: ['17 Lessons', '2 hours 16 mins', '59 Comments'],
   level: 'Beginner',
   learners: '26+',
-  learnerAvatars: [],
+  learnerAvatars: [avatar2, avatar8, avatar9, avatar10].map((src) => ({ src })),
   price: '$25',
   billing: '/lifetime',
   rating: '4.5',
 }
 
 export const courses = [
-  { id: 'learn-figma-from-basic', title: 'Learn Figma from Basic' },
-  { id: 'build-digital-asset', title: 'Build Digital Asset' },
+  {
+    id: 'learn-figma-from-basic',
+    title: 'Learn Figma from Basic',
+    image: courseLearnFigma,
+  },
+  {
+    id: 'build-digital-asset',
+    title: 'Build Digital Asset',
+    image: courseBuildDigitalAsset,
+  },
   {
     id: 'the-power-of-big-data',
     title: 'the Power of Big Data',
+    image: coursePowerOfBigData,
     strongRating: true,
   },
   {
     id: 'balancing-productivity-and-self-care',
     title: 'Balancing Productivity and Self-Care',
+    image: courseBalancingProductivity,
   },
-  { id: 'mastering-money-management', title: 'Mastering Money Management' },
-  { id: 'from-idea-to-startup-success', title: 'From Idea to Startup Success' },
+  {
+    id: 'mastering-money-management',
+    title: 'Mastering Money Management',
+    image: courseMoneyManagement,
+  },
+  {
+    id: 'from-idea-to-startup-success',
+    title: 'From Idea to Startup Success',
+    image: courseIdeaToStartup,
+  },
 ].map((course) => ({ ...courseDefaults, ...course }))
 
 export const categoriesIntro = {
@@ -97,12 +159,12 @@ export const categoriesIntro = {
 }
 
 export const categories = [
-  'Design',
-  'Development',
-  'IT & Software',
-  'Business',
-  'Marketing',
-  'Photography',
+  { label: 'Design', icon: categoryDesign },
+  { label: 'Development', icon: categoryDevelopment },
+  { label: 'IT & Software', icon: categoryItSoftware },
+  { label: 'Business', icon: categoryBusiness },
+  { label: 'Marketing', icon: categoryMarketing },
+  { label: 'Photography', icon: categoryPhotography },
 ]
 
 export const growth = {
@@ -114,6 +176,7 @@ export const growth = {
     { value: '70+', label: 'Courses' },
     { value: '16', label: 'Creators' },
   ],
+  image: heroStudent,
   course: courses[0],
   progress: hero.progress,
 }
@@ -123,6 +186,7 @@ export const creator = {
   brand: 'ByteSpace',
   description:
     'supports individuals or entities in the creation, publication, and administration of educational courses.',
+  image: creatorStudent,
   features: [
     'Share Your Expertise',
     'Monetize Your Passion',
@@ -162,6 +226,7 @@ export const testimonials = [
   {
     name: 'Sarah M.',
     role: 'Enthusiastic Learner',
+    avatar: avatar9,
     compactName: true,
     quote:
       '"ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."',
@@ -169,12 +234,14 @@ export const testimonials = [
   {
     name: 'James L.',
     role: 'Lifelong Learner',
+    avatar: avatar11,
     quote:
       '"I\'ve tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development."',
   },
   {
     name: 'Alex B.',
     role: 'Inspired Creator',
+    avatar: avatar12,
     quote:
       '"As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It\'s fulfilling to see my courses making a positive impact on learners globally."',
   },

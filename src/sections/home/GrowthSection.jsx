@@ -1,9 +1,10 @@
+import coilLime from '@/assets/images/ornament-coil-lime.webp'
 import CourseCard from '@/components/cards/CourseCard'
 import ProgressCard from '@/components/cards/ProgressCard'
 import { growth } from '@/data/home'
 
 export default function GrowthSection() {
-  const { title, description, stats, course, progress } = growth
+  const { title, description, stats, image, course, progress } = growth
 
   return (
     <section className="flex flex-col gap-12 xl:-mr-14.75 xl:ml-px xl:flex-row xl:items-center xl:gap-15.75">
@@ -34,10 +35,21 @@ export default function GrowthSection() {
             variant="highlight"
             className="absolute top-0 left-0 h-96 w-93.25"
           />
+          <img
+            src={image}
+            alt=""
+            className="absolute top-3 left-0 h-135 w-144.25 drop-shadow-portrait"
+          />
           <ProgressCard
             {...progress}
             className="absolute top-53.25 left-86.25 w-58"
             labelClassName="leading-6"
+          />
+          <img
+            src={coilLime}
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute top-16.75 left-101 size-54"
           />
         </div>
       </div>

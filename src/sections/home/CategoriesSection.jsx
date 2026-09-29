@@ -14,8 +14,8 @@ export default function CategoriesSection() {
         </p>
         <ul className="mt-17 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6 lg:gap-10 xl:-mx-px xl:grid-cols-[repeat(6,10.4375rem)]">
           {categories.map((category) => (
-            <li key={category}>
-              <CategoryCard label={category} />
+            <li key={category.label}>
+              <CategoryCard label={category.label} icon={category.icon} />
             </li>
           ))}
         </ul>

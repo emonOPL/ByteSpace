@@ -1,3 +1,5 @@
+import checkCircle from '@/assets/icons/check-circle.svg'
+import springLime from '@/assets/images/ornament-spring-lime.webp'
 import StudentsCard from '@/components/cards/StudentsCard'
 import FloatingCard from '@/components/ui/FloatingCard'
 import ProgressBar from '@/components/ui/ProgressBar'
@@ -10,8 +12,16 @@ const changeBadge =
 const amountText = 'font-heading text-2xl/8 font-semibold tracking-heading'
 
 export default function CreatorSection() {
-  const { title, brand, description, features, revenue, yearToDate, students } =
-    creator
+  const {
+    title,
+    brand,
+    description,
+    image,
+    features,
+    revenue,
+    yearToDate,
+    students,
+  } = creator
 
   return (
     <section className="flex flex-col gap-12 xl:flex-row-reverse xl:items-center xl:justify-between xl:gap-19.75">
@@ -28,6 +38,7 @@ export default function CreatorSection() {
               key={feature}
               className="flex min-h-6 items-end gap-2 text-label-l text-shuttle-gray-950"
             >
+              <img src={checkCircle} alt="" />
               {feature}
             </li>
           ))}
@@ -60,11 +71,24 @@ export default function CreatorSection() {
               {yearToDate.change}
             </span>
           </FloatingCard>
+          <div className="absolute top-0 left-7 h-149 w-108.75 overflow-hidden drop-shadow-portrait">
+            <img
+              src={image}
+              alt=""
+              className="absolute top-0 -left-31 size-170.75 max-w-none"
+            />
+          </div>
           <StudentsCard
             {...students}
             className="absolute top-103.25 left-70.75 w-64.5"
             titleClassName="leading-6"
             ratingClassName="h-4 text-2xs/normal font-bold"
+          />
+          <img
+            src={springLime}
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute top-28.5 left-75.75 size-54"
           />
         </div>
       </div>

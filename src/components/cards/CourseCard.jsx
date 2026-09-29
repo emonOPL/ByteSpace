@@ -1,3 +1,6 @@
+import signal from '@/assets/icons/signal.svg'
+import starRounded from '@/assets/icons/star-rounded.svg'
+import starSharp from '@/assets/icons/star-sharp.svg'
 import AvatarGroup from '@/components/ui/AvatarGroup'
 import Chip from '@/components/ui/Chip'
 import { cn } from '@/lib/cn'
@@ -10,6 +13,7 @@ const variants = {
     level: '',
     price: '',
     rating: 'text-body-l',
+    star: starRounded,
     tone: 'lime',
   },
   highlight: {
@@ -19,6 +23,7 @@ const variants = {
     level: 'leading-5',
     price: 'font-medium leading-7',
     rating: 'text-label-l/7',
+    star: starSharp,
     tone: 'dark',
   },
 }
@@ -78,6 +83,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
                 styles.level,
               )}
             >
+              <img src={signal} alt="" />
               {level}
             </span>
             <AvatarGroup
@@ -103,12 +109,13 @@ export default function CourseCard({ course, variant = 'default', className }) {
         </div>
         <p
           className={cn(
-            'shrink-0 text-black-700',
+            'flex shrink-0 items-center text-black-700',
             strongRating ? 'text-label-l/7' : styles.rating,
           )}
         >
           <span className="sr-only">Rating </span>
           {rating}
+          <img src={styles.star} alt="" />
         </p>
       </div>
     </article>

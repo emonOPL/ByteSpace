@@ -1,3 +1,4 @@
+import star from '@/assets/icons/star.svg'
 import AvatarGroup from '@/components/ui/AvatarGroup'
 import FloatingCard from '@/components/ui/FloatingCard'
 import { cn } from '@/lib/cn'
@@ -19,9 +20,15 @@ export default function StudentsCard({
           {title}
         </p>
         <p
-          className={cn('text-body-xs text-shuttle-gray-950', ratingClassName)}
+          className={cn(
+            'flex items-center text-body-xs text-shuttle-gray-950',
+            ratingClassName,
+          )}
         >
-          {rating} <span className="text-shuttle-gray-400">{reviews}</span>
+          <span>
+            {rating} <span className="text-shuttle-gray-400">{reviews}</span>
+          </span>
+          <img src={star} alt="" />
         </p>
       </div>
       <AvatarGroup avatars={avatars} count={count} />

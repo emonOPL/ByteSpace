@@ -25,6 +25,16 @@
   --color-track: #f6f6f6;
   --color-media: #443131;
 
+  --drop-shadow-portrait:
+    3.19rem 4.557rem 4.5rem rgb(0 0 0 / 0.13),
+    2.3201rem 3.3145rem 3.5rem rgb(0 0 0 / 0.105),
+    1.6149rem 2.307rem 2.25rem rgb(0 0 0 / 0.1),
+    1.0591rem 1.5131rem 1.5rem rgb(0 0 0 / 0.09),
+    0.638rem 0.9114rem 1.0055rem rgb(0 0 0 / 0.08),
+    0.3364rem 0.4806rem 0.5982rem rgb(0 0 0 / 0.07),
+    0.1396rem 0.1994rem 0.3577rem rgb(0 0 0 / 0.06),
+    0.0324rem 0.0463rem 0.1897rem rgb(0 0 0 / 0.04);
+
   --tracking-heading: -0.01em;
   --leading-heading: 1.2;
 

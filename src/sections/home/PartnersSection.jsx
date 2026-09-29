@@ -7,8 +7,8 @@ export default function PartnersSection() {
       <Container>
         <ul className="flex min-h-10.5 flex-wrap items-end justify-center gap-x-18 gap-y-8">
           {partners.logos.map((logo) => (
-            <li key={logo.name}>
-              <img src={logo.src} alt={logo.name} className="h-10.25 w-auto" />
+            <li key={logo.src}>
+              <img src={logo.src} alt={logo.name} />
             </li>
           ))}
         </ul>

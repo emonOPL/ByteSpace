@@ -1,7 +1,8 @@
 import { Link, NavLink } from 'react-router'
+import shoppingBag from '@/assets/icons/shopping-bag.svg'
 import Container from '@/components/ui/Container'
 import Logo from '@/components/ui/Logo'
-import { authNav, mainNav } from '@/data/navigation'
+import { authNav, cartLink, mainNav } from '@/data/navigation'
 import { cn } from '@/lib/cn'
 import { focusRing } from '@/lib/focus'
 
@@ -42,6 +43,15 @@ export default function Header({ className }) {
               </Link>
             </li>
           ))}
+          <li>
+            <Link
+              to={cartLink.to}
+              aria-label={cartLink.label}
+              className={linkClass}
+            >
+              <img src={shoppingBag} alt="" />
+            </Link>
+          </li>
         </ul>
       </Container>
     </header>
