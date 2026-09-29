@@ -1,1 +1,82 @@
 @import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-brand: 'Clash Display', ui-sans-serif, system-ui, sans-serif;
+
+  --color-persian-blue-800: #003be2;
+  --color-electric-lime-400: #d4fb20;
+  --color-mindaro-400: #c1e338;
+  --color-electric-violet-600: #7f30f7;
+  --color-vulcan-950: #040819;
+  --color-black-700: #4f4f4f;
+  --color-black-950: #000000;
+  --color-shuttle-gray-50: #f5f5f6;
+  --color-shuttle-gray-100: #e5e6e8;
+  --color-shuttle-gray-200: #ced0d3;
+  --color-shuttle-gray-300: #abaeb5;
+  --color-shuttle-gray-400: #82868e;
+  --color-shuttle-gray-700: #4b4c53;
+  --color-shuttle-gray-900: #3a3b3f;
+  --color-shuttle-gray-950: #242528;
+
+  --text-heading-l: 4.5rem;
+  --text-heading-l--line-height: 1.2;
+  --text-heading-l--letter-spacing: -0.01em;
+  --text-heading-l--font-weight: 600;
+
+  --text-heading-m: 2.75rem;
+  --text-heading-m--line-height: 1.2;
+  --text-heading-m--letter-spacing: -0.01em;
+  --text-heading-m--font-weight: 600;
+
+  --text-heading-s: 2.25rem;
+  --text-heading-s--line-height: 1.2;
+  --text-heading-s--letter-spacing: -0.01em;
+  --text-heading-s--font-weight: 600;
+
+  --text-heading-xs: 1.25rem;
+  --text-heading-xs--line-height: 1.2;
+  --text-heading-xs--letter-spacing: -0.01em;
+  --text-heading-xs--font-weight: 600;
+
+  --text-display-s: 2.75rem;
+  --text-display-s--line-height: 3.25rem;
+  --text-display-s--letter-spacing: -0.01em;
+  --text-display-s--font-weight: 500;
+
+  --text-body-l: 1.125rem;
+  --text-body-l--line-height: 1.6;
+  --text-body-l--font-weight: 400;
+
+  --text-body-m: 1rem;
+  --text-body-m--line-height: 1.6;
+  --text-body-m--font-weight: 400;
+
+  --text-body-xs: 0.75rem;
+  --text-body-xs--line-height: 1.6;
+  --text-body-xs--font-weight: 400;
+
+  --text-label-l: 1.125rem;
+  --text-label-l--line-height: 1.2;
+  --text-label-l--font-weight: 500;
+
+  --text-label-m: 1rem;
+  --text-label-m--line-height: 1.2;
+  --text-label-m--font-weight: 500;
+
+  --text-label-s: 0.875rem;
+  --text-label-s--line-height: 1.2;
+  --text-label-s--font-weight: 500;
+
+  --text-label-xs: 0.75rem;
+  --text-label-xs--line-height: 1.2;
+  --text-label-xs--font-weight: 500;
+}
+
+@layer base {
+  body {
+    @apply bg-white font-sans antialiased;
+  }
+}
