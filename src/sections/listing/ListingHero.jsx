@@ -62,7 +62,7 @@ export default function ListingHero({
         <form
           role="search"
           onSubmit={submit}
-          className="flex w-full max-w-156 flex-col gap-3 min-[23.4375rem]:flex-row min-[23.4375rem]:items-start sm:gap-4"
+          className="flex w-full max-w-156 flex-col gap-3 min-[23.4375rem]:flex-row min-[23.4375rem]:items-center sm:gap-4"
         >
           <SearchField
             id={id}
