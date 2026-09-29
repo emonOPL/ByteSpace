@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import CourseGrid from '@/components/cards/CourseGrid'
+import PageMeta from '@/components/layout/PageMeta'
 import Container from '@/components/ui/Container'
 import Pagination from '@/components/ui/Pagination'
 import { courseListing } from '@/data/courseListing'
@@ -21,7 +22,10 @@ export default function CoursesPage() {
 
   return (
     <>
-      <title>{courseListing.title}</title>
+      <PageMeta
+        title={courseListing.title}
+        description={courseListing.description}
+      />
       <ListingHero
         id="courses-search"
         heading={courseListing.heading}

@@ -54,7 +54,16 @@ export default function CourseCard({ course, variant = 'default', className }) {
       )}
     >
       <div className="relative h-[12.19625rem] shrink-0 overflow-hidden rounded-xl bg-media">
-        {image && <img src={image} alt="" className="size-full object-cover" />}
+        {image && (
+          <img
+            src={image}
+            alt=""
+            loading="lazy"
+            width="682"
+            height="454"
+            className="size-full object-cover"
+          />
+        )}
         <ul
           className={cn(
             'absolute right-3 left-3 flex flex-wrap gap-x-3 gap-y-2',

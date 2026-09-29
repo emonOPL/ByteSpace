@@ -1,4 +1,5 @@
 import AuthLayout from '@/components/layout/AuthLayout'
+import PageMeta from '@/components/layout/PageMeta'
 import { authShowcase, signup } from '@/data/auth'
 import { signupSchema } from '@/lib/validation'
 import AuthFooter from '@/sections/auth/AuthFooter'
@@ -18,7 +19,7 @@ export default function SignupPage() {
       }
       cardClassName="xl:pb-12.75"
     >
-      <title>{signup.title}</title>
+      <PageMeta title={signup.title} description={signup.description} />
       <div className="flex flex-col gap-10">
         <AuthHeading eyebrow={signup.eyebrow} title={signup.heading} />
         <AuthForm

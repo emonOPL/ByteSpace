@@ -1,9 +1,15 @@
 import { cn } from '@/lib/cn'
 
 const sizes = {
-  sm: { item: 'size-8', stack: '-space-x-2', count: 'text-label-xs' },
+  sm: {
+    item: 'size-8',
+    px: 32,
+    stack: '-space-x-2',
+    count: 'text-label-xs',
+  },
   md: {
     item: 'size-10.75',
+    px: 43,
     stack: '-space-x-4',
     count: 'text-xs/normal font-bold',
   },
@@ -31,6 +37,8 @@ export default function AvatarGroup({
           key={avatar.src}
           src={avatar.src}
           alt={avatar.alt ?? ''}
+          width={styles.px}
+          height={styles.px}
           className={cn('rounded-full object-cover', styles.item)}
         />
       ))}

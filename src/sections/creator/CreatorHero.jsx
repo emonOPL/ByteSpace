@@ -21,6 +21,8 @@ export default function CreatorHero({ creator }) {
         <img
           src={creator.avatar}
           alt=""
+          width="96"
+          height="96"
           className="size-24 shrink-0 rounded-3xl object-cover"
         />
         <div className="flex flex-col gap-2">

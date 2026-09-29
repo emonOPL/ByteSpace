@@ -25,6 +25,7 @@ export default function CreatorCard({ creator, labels, className }) {
         <img
           src={avatar}
           alt=""
+          loading="lazy"
           width="80"
           height="80"
           className="size-20 shrink-0 rounded-3xl object-cover"

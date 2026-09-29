@@ -37,7 +37,7 @@ export default function CtaSection() {
           {cta.button.label}
         </Button>
       </Container>
-      <Ornaments items={ornaments} />
+      <Ornaments items={ornaments} loading="lazy" />
     </section>
   )
 }

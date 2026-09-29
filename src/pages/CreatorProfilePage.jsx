@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { useLoaderData } from 'react-router'
 import CourseGrid from '@/components/cards/CourseGrid'
+import PageMeta from '@/components/layout/PageMeta'
 import Container from '@/components/ui/Container'
 import GridPattern from '@/components/ui/GridPattern'
 import { courseListing } from '@/data/courseListing'
@@ -20,7 +21,10 @@ export default function CreatorProfilePage() {
 
   return (
     <Fragment key={creator.id}>
-      <title>{creatorCopy.title(creator)}</title>
+      <PageMeta
+        title={creatorCopy.title(creator)}
+        description={creatorCopy.description(creator)}
+      />
       <section className="relative bg-persian-blue-800 pt-32 pb-12 xl:pt-43 xl:pb-20.5">
         <GridPattern />
         <Container className="relative">

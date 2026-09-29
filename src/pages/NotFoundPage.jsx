@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import PageMeta from '@/components/layout/PageMeta'
 import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
 import GridPattern from '@/components/ui/GridPattern'
@@ -9,7 +10,7 @@ export default function NotFoundPage() {
 
   return (
     <section className="relative overflow-hidden bg-persian-blue-800 pt-32 pb-24 sm:pt-40 sm:pb-31.25">
-      <title>{title}</title>
+      <PageMeta title={title} description={description} />
       <meta name="robots" content="noindex" />
       <GridPattern />
       <Container className="relative flex flex-col items-center text-center">

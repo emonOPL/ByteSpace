@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import CreatorCard from '@/components/cards/CreatorCard'
+import PageMeta from '@/components/layout/PageMeta'
 import Container from '@/components/ui/Container'
 import { creatorListing, creators } from '@/data/creators'
 import { useCreatorFilters } from '@/hooks/useCreatorFilters'
@@ -15,7 +16,10 @@ export default function CreatorsPage() {
 
   return (
     <>
-      <title>{creatorListing.title}</title>
+      <PageMeta
+        title={creatorListing.title}
+        description={creatorListing.description}
+      />
       <ListingHero
         id="creators-search"
         heading={creatorListing.heading}

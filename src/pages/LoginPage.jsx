@@ -1,4 +1,5 @@
 import AuthLayout from '@/components/layout/AuthLayout'
+import PageMeta from '@/components/layout/PageMeta'
 import { authShowcase, login, socialProviders } from '@/data/auth'
 import { loginSchema } from '@/lib/validation'
 import AuthFooter from '@/sections/auth/AuthFooter'
@@ -10,7 +11,7 @@ import SocialLogin from '@/sections/auth/SocialLogin'
 export default function LoginPage() {
   return (
     <AuthLayout intro={login.intro} aside={<AuthShowcase {...authShowcase} />}>
-      <title>{login.title}</title>
+      <PageMeta title={login.title} description={login.description} />
       <div className="flex flex-col gap-10">
         <AuthHeading eyebrow={login.eyebrow} title={login.heading} />
         <AuthForm

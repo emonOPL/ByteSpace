@@ -72,6 +72,8 @@ export default function CourseSidebar({ details, className }) {
           <img
             src={creator.avatar}
             alt=""
+            width="52"
+            height="52"
             className="size-13 shrink-0 rounded-full object-cover"
           />
           <div>

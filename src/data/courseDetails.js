@@ -19,6 +19,8 @@ import { courses } from '@/data/courses'
 
 export const courseDetailsCopy = {
   title: (course) => `${course.title} | ByteSpace`,
+  description: (course) =>
+    `${course.title} by ${course.author}. A ${course.level.toLowerCase()} ${course.category} course on ByteSpace with ${course.meta.join(', ').toLowerCase()}.`,
   share: { label: 'Share', copied: 'Link copied' },
   preview: 'Course preview',
   tabs: {

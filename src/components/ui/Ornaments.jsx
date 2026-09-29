@@ -1,7 +1,7 @@
 import Ornament from '@/components/ui/Ornament'
 import { cn } from '@/lib/cn'
 
-export default function Ornaments({ items, className }) {
+export default function Ornaments({ items, loading, className }) {
   return (
     <div
       aria-hidden="true"
@@ -14,6 +14,7 @@ export default function Ornaments({ items, className }) {
         <Ornament
           key={item.className}
           src={item.src}
+          loading={loading}
           className={item.className}
         />
       ))}

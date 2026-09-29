@@ -13,6 +13,8 @@ import { courses } from '@/data/courses'
 
 export const creatorCopy = {
   title: (creator) => `${creator.name} | ByteSpace`,
+  description: (creator) =>
+    `${creator.name}, ${creator.headline}. ${creator.bio[0]}`,
   badge: 'Creator',
   stats: { products: 'Products', followers: 'Followers' },
   follow: { idle: 'Follow', active: 'Following' },
@@ -153,6 +155,8 @@ export const creators = [
 
 export const creatorListing = {
   title: 'Creators | ByteSpace',
+  description:
+    'Meet the ByteSpace creators. Explore their specialties, follow their work and discover the courses they teach.',
   heading: 'Meet Our Creators',
   search: { label: 'Search creators', placeholder: 'Search' },
   scope: 'creators',

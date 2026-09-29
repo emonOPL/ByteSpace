@@ -30,6 +30,8 @@ export const socialProviders = [
 
 export const login = {
   title: 'Sign In | ByteSpace',
+  description:
+    'Sign in to your ByteSpace account to continue learning and managing your courses.',
   intro: {
     title: 'Sign in with ease',
     description:
@@ -48,6 +50,8 @@ export const login = {
 
 export const signup = {
   title: 'Create an Account | ByteSpace',
+  description:
+    'Create a free ByteSpace account to join courses from creators around the world.',
   intro: {
     title: 'Sign up and come in',
     description:

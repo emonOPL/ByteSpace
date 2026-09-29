@@ -74,6 +74,9 @@ export default function HeroSection() {
           <img
             src={image}
             alt=""
+            fetchPriority="high"
+            width="516"
+            height="483"
             className="absolute inset-0 size-full [filter:url(#portrait-shadow)]"
           />
           <FloatingCard className="absolute top-31.75 -left-6.75 hidden w-52 text-left sm:flex">

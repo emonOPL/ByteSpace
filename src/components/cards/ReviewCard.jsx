@@ -17,6 +17,9 @@ export default function ReviewCard({ review, ratingLabel, className }) {
             <img
               src={avatar}
               alt=""
+              loading="lazy"
+              width="52"
+              height="52"
               className="size-13 shrink-0 rounded-full object-cover"
             />
             <div>
