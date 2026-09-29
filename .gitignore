@@ -35,6 +35,7 @@ CLAUDE.local.md
 .github/copilot-instructions.md
 IMPLEMENTATION_PLAN.md
 *.plan.md
+.github/pull_request_template.md
 
 .vscode/*
 !.vscode/extensions.json
