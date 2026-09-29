@@ -1,7 +1,5 @@
 # ByteSpace
 
-A marketing and course platform website for ByteSpace, built from the Figma design as a frontend assessment.
-
 **Live site:** https://byte-space-theta.vercel.app
 **Repository:** https://github.com/emonOPL/ByteSpace
 
