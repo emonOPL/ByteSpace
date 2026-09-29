@@ -18,7 +18,11 @@ export default function CourseHero({ details }) {
       await navigator.share({ title, url }).catch(() => {})
       return
     }
-    await navigator.clipboard?.writeText(url)
+    try {
+      await navigator.clipboard.writeText(url)
+    } catch {
+      return
+    }
     setCopied(true)
     clearTimeout(timer.current)
     timer.current = setTimeout(() => setCopied(false), 2000)

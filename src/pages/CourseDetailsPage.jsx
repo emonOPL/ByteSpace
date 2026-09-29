@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { useLoaderData, useSearchParams } from 'react-router'
 import Container from '@/components/ui/Container'
 import GridPattern from '@/components/ui/GridPattern'
@@ -34,7 +35,7 @@ export default function CourseDetailsPage() {
   }
 
   return (
-    <>
+    <Fragment key={details.course.id}>
       <title>{courseDetailsCopy.title(details.course)}</title>
       <section className="relative bg-persian-blue-800 pt-32 pb-10 xl:h-239.25 xl:pt-43 xl:pb-0">
         <GridPattern />
@@ -71,6 +72,6 @@ export default function CourseDetailsPage() {
           </div>
         </div>
       </Container>
-    </>
+    </Fragment>
   )
 }
