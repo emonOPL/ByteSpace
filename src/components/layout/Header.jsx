@@ -108,7 +108,7 @@ export default function Header({ className }) {
           open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]',
         )}
       >
-        <div className="overflow-hidden">
+        <div className="max-h-[calc(100dvh-4.5rem)] overflow-y-auto overscroll-contain">
           <Container className="flex flex-col gap-4 border-t border-shuttle-gray-50/12 pt-4 pb-6">
             <nav aria-label={navLabels.mobile}>
               <ul className="flex flex-col">
