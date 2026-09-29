@@ -4,6 +4,7 @@ import springWhite from '@/assets/images/ornament-spring-white.webp'
 import torusLime from '@/assets/images/ornament-torus-lime.webp'
 import CourseCard from '@/components/cards/CourseCard'
 import StudentsCard from '@/components/cards/StudentsCard'
+import Ornament from '@/components/ui/Ornament'
 import { cn } from '@/lib/cn'
 
 const ornaments = [
@@ -43,11 +44,10 @@ export default function AuthShowcase({
         reviewsClassName={reviewsClassName}
       />
       {ornaments.map((ornament) => (
-        <img
+        <Ornament
           key={ornament.className}
           src={ornament.src}
-          alt=""
-          className={cn('absolute max-w-none', ornament.className)}
+          className={ornament.className}
         />
       ))}
     </div>

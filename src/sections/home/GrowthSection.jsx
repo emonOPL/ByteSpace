@@ -1,6 +1,7 @@
 import coilLime from '@/assets/images/ornament-coil-lime.webp'
 import CourseCard from '@/components/cards/CourseCard'
 import ProgressCard from '@/components/cards/ProgressCard'
+import Ornament from '@/components/ui/Ornament'
 import { growth } from '@/data/home'
 
 export default function GrowthSection() {
@@ -45,12 +46,7 @@ export default function GrowthSection() {
             className="absolute top-53.25 left-86.25 w-58"
             labelClassName="leading-6"
           />
-          <img
-            src={coilLime}
-            alt=""
-            aria-hidden="true"
-            className="pointer-events-none absolute top-16.75 left-101 w-54.25"
-          />
+          <Ornament src={coilLime} className="top-16.75 left-101 w-54.25" />
         </div>
       </div>
     </section>

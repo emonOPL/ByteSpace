@@ -1,3 +1,4 @@
+import Ornament from '@/components/ui/Ornament'
 import { cn } from '@/lib/cn'
 
 export default function Ornaments({ items, className }) {
@@ -10,11 +11,10 @@ export default function Ornaments({ items, className }) {
       )}
     >
       {items.map((item) => (
-        <img
+        <Ornament
           key={item.className}
           src={item.src}
-          alt=""
-          className={cn('absolute max-w-none', item.className)}
+          className={item.className}
         />
       ))}
     </div>

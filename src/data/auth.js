@@ -7,6 +7,21 @@ export const authShowcase = {
   students: hero.students,
 }
 
+const emailField = {
+  name: 'email',
+  type: 'email',
+  autoComplete: 'email',
+  label: 'Email',
+  placeholder: 'designer@example.com',
+}
+
+const passwordField = {
+  name: 'password',
+  type: 'password',
+  label: 'Password',
+  placeholder: '********',
+}
+
 export const socialProviders = [
   { name: 'Facebook', label: 'Continue with Facebook', icon: facebook },
   { name: 'Google', label: 'Continue with Google', icon: google },
@@ -21,10 +36,7 @@ export const login = {
   },
   eyebrow: 'Sign In',
   heading: 'Welcome Back',
-  fields: {
-    email: { label: 'Email', placeholder: 'designer@example.com' },
-    password: { label: 'Password', placeholder: '********' },
-  },
+  fields: [emailField, { ...passwordField, autoComplete: 'current-password' }],
   submit: { label: 'Sign In', pending: 'Signing In...' },
   divider: 'or',
   footer: {
@@ -42,11 +54,16 @@ export const signup = {
   },
   eyebrow: 'Create an Account',
   heading: 'Welcome to ByteSpace',
-  fields: {
-    name: { label: 'Full Name', placeholder: 'Jamie Davis' },
-    email: { label: 'Email', placeholder: 'designer@example.com' },
-    password: { label: 'Password', placeholder: '********' },
-  },
+  fields: [
+    {
+      name: 'name',
+      autoComplete: 'name',
+      label: 'Full Name',
+      placeholder: 'Jamie Davis',
+    },
+    emailField,
+    { ...passwordField, autoComplete: 'new-password' },
+  ],
   submit: { label: 'Continue', pending: 'Creating Account...' },
   footer: {
     text: 'Already have an account?',
