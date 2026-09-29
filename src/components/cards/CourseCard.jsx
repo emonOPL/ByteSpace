@@ -7,6 +7,7 @@ import { cn } from '@/lib/cn'
 
 const variants = {
   default: {
+    chips: 'bottom-4.75',
     chip: '',
     title: '',
     author: '',
@@ -16,6 +17,7 @@ const variants = {
     tone: 'lime',
   },
   highlight: {
+    chips: 'bottom-3.25',
     chip: 'leading-5',
     title: 'leading-7',
     author: 'leading-5',
@@ -51,7 +53,12 @@ export default function CourseCard({ course, variant = 'default', className }) {
     >
       <div className="relative h-[12.19625rem] shrink-0 overflow-hidden rounded-xl bg-media">
         {image && <img src={image} alt="" className="size-full object-cover" />}
-        <ul className="absolute right-3 bottom-4.75 left-3 flex flex-wrap gap-x-3 gap-y-2">
+        <ul
+          className={cn(
+            'absolute right-3 left-3 flex flex-wrap gap-x-3 gap-y-2',
+            styles.chips,
+          )}
+        >
           {meta.map((item) => (
             <li key={item} className="flex">
               <Chip className={styles.chip}>{item}</Chip>

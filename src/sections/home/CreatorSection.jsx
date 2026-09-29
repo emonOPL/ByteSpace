@@ -82,7 +82,8 @@ export default function CreatorSection() {
             {...students}
             className="absolute top-103.25 left-70.75 w-64.5"
             titleClassName="leading-6"
-            ratingClassName="h-4 text-2xs/normal font-bold"
+            ratingClassName="h-4 text-2xs/normal"
+            ratingValueClassName="font-bold"
           />
           <img
             src={springLime}

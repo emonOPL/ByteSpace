@@ -12,6 +12,7 @@ const sizes = {
 const tones = {
   lime: 'bg-electric-lime-400 text-shuttle-gray-950',
   dark: 'bg-black-950 text-white',
+  ink: 'bg-shuttle-gray-950 text-shuttle-gray-50',
 }
 
 export default function AvatarGroup({

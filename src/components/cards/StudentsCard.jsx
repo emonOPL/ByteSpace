@@ -1,4 +1,4 @@
-import star from '@/assets/icons/star.svg'
+import defaultStar from '@/assets/icons/star.svg'
 import AvatarGroup from '@/components/ui/AvatarGroup'
 import FloatingCard from '@/components/ui/FloatingCard'
 import { cn } from '@/lib/cn'
@@ -9,9 +9,13 @@ export default function StudentsCard({
   reviews,
   avatars,
   count,
+  star = defaultStar,
+  tone,
   className,
   titleClassName,
   ratingClassName,
+  ratingValueClassName,
+  reviewsClassName,
 }) {
   return (
     <FloatingCard className={cn('justify-center', className)}>
@@ -26,12 +30,15 @@ export default function StudentsCard({
           )}
         >
           <span>
-            {rating} <span className="text-shuttle-gray-400">{reviews}</span>
+            <span className={ratingValueClassName}>{rating}</span>{' '}
+            <span className={cn('text-shuttle-gray-400', reviewsClassName)}>
+              {reviews}
+            </span>
           </span>
           <img src={star} alt="" />
         </p>
       </div>
-      <AvatarGroup avatars={avatars} count={count} />
+      <AvatarGroup avatars={avatars} count={count} tone={tone} />
     </FloatingCard>
   )
 }
