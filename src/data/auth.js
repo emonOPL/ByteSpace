@@ -1,6 +1,7 @@
 import facebook from '@/assets/icons/facebook.svg'
 import google from '@/assets/icons/google.svg'
-import { courses, hero } from '@/data/home'
+import { courses } from '@/data/courses'
+import { hero } from '@/data/home'
 
 export const authShowcase = {
   courses: [courses[1], courses[2]],

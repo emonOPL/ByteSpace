@@ -29,6 +29,8 @@
   --color-track: #f6f6f6;
   --color-media: #443131;
 
+  --shadow-float: 0 0.5rem 1.5rem rgb(4 8 25 / 0.16);
+
   --tracking-heading: -0.01em;
   --leading-heading: 1.2;
 
