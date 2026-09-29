@@ -181,7 +181,6 @@ export const testimonials = [
     name: 'Sarah M.',
     role: 'Enthusiastic Learner',
     avatar: avatar9,
-    compactName: true,
     quote:
       '"ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."',
   },

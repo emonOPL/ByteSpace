@@ -21,10 +21,10 @@ export default function TestimonialsSection() {
               {testimonialsIntro.description}
             </p>
           </div>
-          <ul className="grid items-start gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(3,23.375rem)] xl:gap-10.25">
+          <ul className="grid auto-rows-fr gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(3,23.375rem)] xl:gap-10.25">
             {testimonials.map((testimonial) => (
               <li key={testimonial.name}>
-                <TestimonialCard testimonial={testimonial} />
+                <TestimonialCard testimonial={testimonial} className="h-full" />
               </li>
             ))}
           </ul>
