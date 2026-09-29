@@ -2,7 +2,7 @@
 
 A marketing and course platform website for ByteSpace, built from the Figma design as a frontend assessment.
 
-**Live site:** `https://<project>.vercel.app`
+**Live site:** https://byte-space-theta.vercel.app
 **Repository:** https://github.com/emonOPL/ByteSpace
 
 ![ByteSpace home page](docs/screenshots/home.webp)
@@ -78,7 +78,7 @@ Pages compose sections, sections use layout and UI components, and all copy live
 - **Design tokens.** Colors, font families and composite text styles (`text-heading-l`, `text-body-m`, `text-label-s`, ...) come from the Figma styles and live in the `@theme` block of `src/index.css`. Styling uses Tailwind classes only.
 - **Fonts.** Satoshi, Poppins and Clash Display are self-hosted as woff2 and preloaded to avoid layout shift.
 - **Performance.** Every page except Home is code-split. Images have explicit sizes, below-the-fold images load lazily, and the hero images are fetched with high priority. Cumulative Layout Shift is 0 on every page.
-- **SEO.** Each page sets its own title and meta description. Open Graph tags and `robots.txt` are included, and the 404 page is marked `noindex`.
+- **SEO.** Each page sets its own title and meta description. Open Graph and Twitter card tags with a preview image and `robots.txt` are included, and the 404 page is marked `noindex`.
 - **Accessibility.** Semantic landmarks and headings, keyboard support for tabs, dropdowns and the mobile menu, visible focus rings, live regions for result counts, and form errors linked to their fields with `aria-describedby`.
 - **Deployment.** `vercel.json` rewrites every path to `index.html`, so client-side routes work on refresh and unknown paths show the custom 404 page.
 
@@ -97,7 +97,6 @@ The layout matches the Figma frames at 1440px, and every page was compared pixel
 - There is no backend. Sign in and sign up validate the form and simulate a request, and the follow button is not saved.
 - The cart icon links to `/cart`, which shows the 404 page because the design has no cart page.
 - Sample creators have no courses, because every course in the design belongs to PurePearl Studio.
-- Open Graph tags have no preview image, since that needs an absolute production URL.
 - Two gray text colors from the design (`#82868e` and `#888888` on white) are below the WCAG AA contrast ratio for body text. They were kept to match the design.
 
 ## Git Workflow
