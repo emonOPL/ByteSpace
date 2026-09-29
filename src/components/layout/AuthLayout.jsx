@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import logoMark from '@/assets/icons/logo-mark.svg'
 import Container from '@/components/ui/Container'
 import GridPattern from '@/components/ui/GridPattern'
+import { homeLink } from '@/data/navigation'
 import { cn } from '@/lib/cn'
 import { focusRing } from '@/lib/focus'
 
@@ -12,8 +13,8 @@ export default function AuthLayout({ intro, aside, cardClassName, children }) {
       <Container className="relative flex flex-col pb-16 xl:block xl:h-256 xl:pb-0">
         <header className="w-full max-w-144.75 self-center pt-8.75 xl:absolute xl:top-0 xl:left-0.5">
           <Link
-            to="/"
-            aria-label="ByteSpace home"
+            to={homeLink.to}
+            aria-label={homeLink.label}
             className={cn('block w-fit', focusRing)}
           >
             <img src={logoMark} alt="" />

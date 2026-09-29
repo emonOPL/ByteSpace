@@ -32,6 +32,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
   const {
     image,
     title,
+    authorPrefix,
     author,
     meta,
     level,
@@ -39,6 +40,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
     learnerAvatars,
     price,
     billing,
+    ratingLabel,
     rating,
     strongRating,
   } = course
@@ -78,7 +80,8 @@ export default function CourseCard({ course, variant = 'default', className }) {
               {title}
             </h3>
             <p className={cn('text-body-xs text-black-700', styles.author)}>
-              by <span className="text-persian-blue-800">{author}</span>
+              {authorPrefix}{' '}
+              <span className="text-persian-blue-800">{author}</span>
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
@@ -113,7 +116,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
             strongRating ? 'text-label-l/7' : styles.rating,
           )}
         >
-          <span className="sr-only">Rating </span>
+          <span className="sr-only">{ratingLabel} </span>
           {rating}
           <img src={styles.star} alt="" />
         </p>
