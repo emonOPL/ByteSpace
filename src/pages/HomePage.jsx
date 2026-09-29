@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <div className="relative">
       <PortraitShadow />
-      <Header className="absolute inset-x-0 top-0" />
+      <Header />
       <main>
         <HeroSection />
         <PartnersSection />

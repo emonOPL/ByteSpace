@@ -51,7 +51,7 @@ export default function CourseCard({ course, variant = 'default', className }) {
     >
       <div className="relative h-[12.19625rem] shrink-0 overflow-hidden rounded-xl bg-media">
         {image && <img src={image} alt="" className="size-full object-cover" />}
-        <ul className="absolute top-37.5 left-3 flex gap-3">
+        <ul className="absolute right-3 bottom-4.75 left-3 flex flex-wrap gap-x-3 gap-y-2">
           {meta.map((item) => (
             <li key={item} className="flex">
               <Chip className={styles.chip}>{item}</Chip>

@@ -10,3 +10,5 @@ export const authNav = [
 ]
 
 export const cartLink = { label: 'Cart', to: '/cart' }
+
+export const menuLabels = { open: 'Open menu', close: 'Close menu' }

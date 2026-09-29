@@ -39,7 +39,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-persian-blue-800 pt-42.25 lg:h-256">
+    <section className="relative overflow-hidden bg-persian-blue-800 pt-32 lg:h-256 lg:pt-42.25">
       <GridPattern />
       <Container className="relative flex flex-col items-center text-center">
         <h1 className="max-w-233.75 font-heading text-heading-s text-white sm:text-heading-m lg:text-heading-l">
@@ -51,9 +51,9 @@ export default function HeroSection() {
         <form
           role="search"
           onSubmit={handleSubmit}
-          className="mt-15 flex w-full max-w-145.25 items-start gap-4"
+          className="mt-15 flex w-full max-w-145.25 flex-col gap-3 min-[23.4375rem]:flex-row min-[23.4375rem]:items-start sm:gap-4"
         >
-          <div className="flex h-13 min-w-0 flex-1 items-center gap-2 rounded-3xl bg-white px-6 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-electric-lime-400">
+          <div className="flex h-13 min-w-0 items-center gap-2 rounded-3xl bg-white px-4 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-electric-lime-400 min-[23.4375rem]:flex-1 sm:px-6">
             <img src={searchIcon} alt="" className="shrink-0" />
             <label htmlFor="hero-search" className="sr-only">
               {search.label}
@@ -63,10 +63,10 @@ export default function HeroSection() {
               name="q"
               type="search"
               placeholder={search.placeholder}
-              className="w-full min-w-0 bg-transparent text-body-l text-shuttle-gray-950 outline-none placeholder:text-shuttle-gray-400"
+              className="w-full min-w-0 bg-transparent text-body-m text-shuttle-gray-950 outline-none placeholder:text-shuttle-gray-400 sm:text-body-l"
             />
           </div>
-          <Button type="submit" className="shrink-0">
+          <Button type="submit" className="shrink-0 min-[23.4375rem]:w-auto">
             {search.button}
           </Button>
         </form>
