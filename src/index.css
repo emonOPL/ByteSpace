@@ -32,6 +32,14 @@
 
   --shadow-float: 0 0.5rem 1.5rem rgb(4 8 25 / 0.16);
 
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   --tracking-heading: -0.01em;
   --leading-heading: 1.2;
 

@@ -17,6 +17,10 @@ import { cn } from '@/lib/cn'
 import { focusRing } from '@/lib/focus'
 
 const linkClass = cn('block text-shuttle-gray-50', focusRing)
+const navLinkClass = cn(
+  linkClass,
+  'transition-[line-height] duration-300 ease-out motion-reduce:transition-none',
+)
 
 export default function Header({ className }) {
   const scrolled = useScrolled(8)
@@ -64,7 +68,7 @@ export default function Header({ className }) {
                   to={item.to}
                   end={item.to === homeLink.to}
                   className={({ isActive }) =>
-                    cn(linkClass, isActive ? 'text-label-m' : 'text-body-m')
+                    cn(navLinkClass, isActive ? 'text-label-m' : 'text-body-m')
                   }
                 >
                   {item.label}
@@ -120,7 +124,7 @@ export default function Header({ className }) {
                       onClick={close}
                       className={({ isActive }) =>
                         cn(
-                          linkClass,
+                          navLinkClass,
                           'py-3',
                           isActive ? 'text-label-l' : 'text-body-l',
                         )
